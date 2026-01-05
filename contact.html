@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Happylaama's Website</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.png" type="image/png">
+</head>
+<body>
+  <div class="grid"></div>
+
+  <!-- Header -->
+  <header>
+    <div class="section-bar header-bar">
+      HAPPYLAAMA'S WEBSITE
+    </div>
+  </header>
+
+  <!-- Nav -->
+  <nav>
+    <div class="section-bar nav-bar">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="creations.html">Creations</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <main>
+  <div class="section-bar main-bar">
+    <h1>Contact Me</h1>
+    <p>If you want to reach out, feel free to send a message!</p>
+
+    <p>
+      Discord:
+      <a href="#" id="copy-discord">@happylaama</a>
+    </p>
+    <p>
+      YouTube:
+      <a href="https://www.youtube.com/@HappyLaama" target="_blank" rel="noopener noreferrer">
+        @HappyLaama
+      </a>
+    </p>
+    <p>
+      TikTok:
+      <a href="https://www.tiktok.com/@official_happylaama" target="_blank" rel="noopener noreferrer">
+        @official_happylaama
+      </a>
+    </p>
+    <p>
+      X:
+      <a href="https://x.com/real_happylaama" target="_blank" rel="noopener noreferrer">
+        @real_happylaama
+      </a>
+    </p>
+    <p>
+      GitHub:
+      <a href="https://github.com/HappyLaama" target="_blank" rel="noopener noreferrer">
+        @HappyLaama
+      </a>
+    </p>
+  </div>
+</main>
+
+<script>
+  document.getElementById("copy-discord").addEventListener("click", function(e) {
+    e.preventDefault();
+    navigator.clipboard.writeText("happylaama");
+    this.textContent = "Copied!";
+    setTimeout(() => {
+      this.textContent = "@happylaama";
+    }, 1500);
+  });
+</script>
+
+
+
+
+
+  <!-- Footer -->
+  <footer>
+    <div class="section-bar footer-bar">
+      &copy; 2025 Happylaama's website
+    </div>
+  </footer>
+</body>
+</html>

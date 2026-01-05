@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Press Start 2P', cursive;
+      background: #0d0d1a;
+      overflow-x: hidden;
+       user-select: none; /* Standard */
+  -webkit-user-select: none; /* Chrome, Safari */
+  -moz-user-select: none;    /* Firefox */
+  -ms-user-select: none;     /* IE/Edge */
+    }
+
+    .grid {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#00ffff 1px, transparent 1px),
+              linear-gradient(90deg, #ff00ff 1px, transparent 1px);
+  background-size: 50px 50px;
+  z-index: -2;
+  animation: moveGrid 10s linear infinite;
+}
+
+@keyframes moveGrid {
+  0% {
+    background-position: 0 0, 0 0;
+  }
+  100% {
+    background-position: 200px 200px, 200px 200px;
+  }
+}
+
+
+    .section-bar {
+      display: inline-block;
+      position: relative;
+      padding: 20px 60px;
+      margin: 40px auto;
+      z-index: 1;
+      font-size: 1rem;
+    }
+
+    .section-bar::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      height: 100%;
+      border-radius: 5px;
+      z-index: -1;
+      opacity: 0.15; /* subtle glow */
+    }
+
+    /* Neon colors and text colors for each section */
+    .header-bar { 
+      color: #ff00ff; 
+    }
+    .header-bar::before { 
+      background: rgba(255,0,255,0.75);
+      box-shadow: 0 0 20px rgba(255, 0, 255, 0.75), 0 0 40px rgba(255,0,255,0.2);
+    }
+
+    .nav-bar { 
+      color: #00ffff; 
+    }
+    .nav-bar::before { 
+      background: rgba(0,255,255,0.75);
+      box-shadow: 0 0 20px rgba(0,255,255,0.75), 0 0 40px rgba(0,255,255,0.2);
+    }
+
+    .main-bar { 
+      color: #ffff005d; 
+      padding: 50px 60px;
+    }
+    .main-bar::before { 
+      background: rgba(255,255,0,0.75);
+      box-shadow: 0 0 20px rgba(255,255,0,0.75), 0 0 40px rgba(255,255,0,0.2);
+    }
+
+    .footer-bar { 
+      color: #ff00ff; 
+      padding: 30px 40px;
+    }
+    .footer-bar::before { 
+      background: rgba(255, 0, 255, 0.75);
+      box-shadow: 0 0 20px rgba(255,0,255,0.75), 0 0 40px rgba(255,0,255,0.2);
+    }
+
+    header, nav, main {
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Move the nav bar up closer to header */
+    nav .section-bar {
+      margin-top: -10px;
+    }
+
+    nav a {
+  display: inline-block;      /* makes the entire padded area clickable */
+  padding: 12px 24px;         /* bigger clickable area */
+  text-decoration: none;
+  color: #00ffff;
+  text-shadow: 0 0 3px #00ffff, 0 0 7px #ff00ff;
+  transition: 0.3s;
+  position: relative;
+  z-index: 2;
+}
+
+nav a:hover {
+  color: #ffcc00;
+  text-shadow: 0 0 10px #ffcc00, 0 0 20px #ff00ff;
+}
+
+
+    nav a:hover {
+      color: #ffcc00;
+      text-shadow: 0 0 10px #ffcc00, 0 0 20px #ff00ff;
+    }
+
+    h1 {
+      font-size: 1.2rem;
+      text-shadow: 0 0 5px currentColor, 0 0 10px currentColor;
+    }
+
+    p {
+      text-shadow: 0 0 3px currentColor;
+      margin-bottom: 20px;
+    }
+
+    .retro-button {
+      display: inline-block;
+      padding: 12px 24px;
+      margin: 10px;
+      border: 2px solid #ff00ff;
+      color: #ff00ff;
+      background-color: transparent;
+      font-family: 'Press Start 2P', cursive;
+      cursor: pointer;
+      text-decoration: none;
+      transition: 0.3s;
+      text-shadow: 0 0 5px #ff00ff;
+      position: relative;
+      z-index: 1;
+    }
+
+    .retro-button:hover {
+      background-color: #ff00ff;
+      color: #0d0d1a;
+      box-shadow: 0 0 20px #ff00ff, 0 0 40px #00ffff;
+    }
+
+    footer {
+      font-size: 0.7rem;
+      text-align: center;
+      z-index: 1;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+    }
+
+.section-bar.main-bar {
+  max-width: 600px;
+  margin: 4rem auto;
+  padding: 1.5rem 2rem;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.section-bar h1 {
+  margin-bottom: 0.5rem;
+}
+
+.section-bar a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+.section-bar a:hover {
+  text-decoration: underline;
+}
+/* --- Retro contact links styling to match the yellow neon theme --- */
+/* --- Clean, non-bright main contact section --- */
+.section-bar.main-bar {
+  background: transparent;
+  border-radius: 5px;
+  color: #e6e600;
+  padding: 50px 60px;
+  text-align: center;
+  text-shadow: 0 0 3px #ffff33, 0 0 8px rgba(255, 255, 0, 0.75);
+  box-shadow: none;
+  line-height: 1.8;
+}
+
+/* Softer glow behind the section */
+.section-bar.main-bar::before {
+  background: rgba(255, 255, 0, 0.4);
+  box-shadow: 0 0 10px rgba(255, 255, 0, 1);
+}
+
+/* Link styles — dimmer, smoother neon */
+.main-bar a {
+  color: #e6e600;
+  text-decoration: none;
+  text-shadow: 0 0 4px #ffff66, 0 0 8px rgba(255, 255, 0, 0.75);
+  transition: 0.3s;
+}
+
+.main-bar a:hover {
+  color: #ffcc00;
+  text-shadow: 0 0 6px #ffcc00, 0 0 10px #ff00ff;
+}
