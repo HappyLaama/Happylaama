@@ -54,7 +54,15 @@
       z-index: -1;
       opacity: 0.15; /* subtle glow */
     }
-
+.main-image {
+  display: block;
+  margin: 0px auto 0 auto; /* pushes it below text + centers it */
+  max-width: 100%;
+  width: 400px; /* adjust size */
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(255, 255, 0, 0.4);
+}
     /* Neon colors and text colors for each section */
     .header-bar { 
       color: #ff00ff; 
